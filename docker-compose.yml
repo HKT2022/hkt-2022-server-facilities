@@ -11,3 +11,9 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=fuawb.cJAIO.o619eD8.X45.zPwov333fwe
       - MYSQL_DATABASE=svc
+  smtp:
+    image: namshi/smtp
+    ports:
+      - '25:25'
+    environment:
+      - RELAY_NETWORKS=:192.168.0.0/16
